@@ -30,7 +30,9 @@ fn pig_latin_converter(word: &String) -> String {
 
         _ => {
             let mut i = 0;
-            while !vowels.contains(&word.chars().nth(i).unwrap().to_ascii_lowercase()) {
+            let is_not_vowel = !vowels.contains(&word.chars().nth(i).unwrap().to_ascii_lowercase());
+
+            while is_not_vowel {
                 i += 1;
             }
 
